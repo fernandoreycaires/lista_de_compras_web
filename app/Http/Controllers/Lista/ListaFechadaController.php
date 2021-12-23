@@ -12,7 +12,7 @@ class ListaFechadaController extends Controller
     {
         $user = Auth()->user() ; //Pega os dados do Usuario logado
 
-        $listasAntigas = Lista::where('requisitante', $user->id)->where('status', 'Cancelado')->orwhere('status', 'Comprado')->with('itens')->get()->take(30)->sortByDesc('id');
+        $listasAntigas = Lista::where('requisitante', $user->id)->where('status', 'Cancelado')->orwhere('requisitante', $user->id)->where('status', 'Comprado')->with('itens')->get()->take(30)->sortByDesc('id');
 
         return view('sistema.listasAnteriores.index', 
                     ['user' => $user ,

@@ -1,4 +1,5 @@
 <b>Lista de Compras</b>
+<br>
 Sistema básico e simples de Lista de Compras, feito para facilitar desde a criação da lista até o momento em que estiver no mercado fazendo as compras. <br>
 Criado para treinar minha programação e melhorar meus conhecimentos
 

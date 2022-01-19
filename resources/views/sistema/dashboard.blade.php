@@ -101,32 +101,34 @@
                 </div>
             </div>
 
-            @endforeach
-
-                <!-- Modal Cancelar lista -->
-                <div class="modal fade" id="cancelList{{$listaAberta->id}}">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Cancelar Lista</h5>
-                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                                </button>
-                            </div>
-                            <form action="{{route('cancelLista',['lista' => $listaAberta->id])}}" method="post">
-                                @csrf
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <h1>Deseja cancelar lista # {{$listaAberta->id}}</h1>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-                                    <button type="submit" class="btn btn-danger">Sim</button>
-                                </div>
-                            </form>
+            <!-- Modal Cancelar lista -->
+            <div class="modal fade" id="cancelList{{$listaAberta->id}}">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Cancelar Lista</h5>
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                            </button>
                         </div>
+                        <form action="{{route('cancelLista',['lista' => $listaAberta->id])}}" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <h1>Deseja cancelar lista # {{$listaAberta->id}}</h1>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                                <button type="submit" class="btn btn-danger">Sim</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
+
+            @endforeach
+
+                
 
         </div>
         <!-- /# column -->

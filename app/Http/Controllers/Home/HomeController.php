@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function __construct(Request $request)
+    {
+        $this->middleware('auth');
+        $this->request = $request;
+    }
+    
     public function home()
     {
         $user = Auth()->user() ; //Pega os dados do Usuario logado

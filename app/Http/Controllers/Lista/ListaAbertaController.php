@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class ListaAbertaController extends Controller
 {
+    public function __construct(Request $request)
+    {
+        $this->middleware('auth');
+        $this->request = $request;
+    }
+    
     public function listaAberta()
     {
         $user = Auth()->user() ; //Pega os dados do Usuario logado

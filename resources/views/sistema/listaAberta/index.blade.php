@@ -159,7 +159,7 @@
                         <div class="form-group">
                             <input type="hidden" name="idlista" value="{{$listaAberta->id}}">
                             <p><input class="form-control form-control-lg input-rounded" name="produto" type="text" placeholder="Produto" required></p>
-                            <p><input class="form-control form-control-lg input-rounded" name="qtd" type="text" placeholder="Quantidade" required></p>
+                            <p><input class="form-control form-control-lg input-rounded" name="qtd" type="number" placeholder="Quantidade" required></p>
                             <p><input class="form-control form-control-lg input-rounded" name="und" type="text" placeholder="Unidade" required></p>
                             <label>Observação:</label>
                             <textarea class="form-control h-150px" rows="4" id="comment" name="obs"></textarea>
